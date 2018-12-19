@@ -1,0 +1,11 @@
+main(fullpage)
+1) 상품-기본1,기본2,기본3
+tea shop
+잎차/피라미드/티백/파우더
+2)상품-기본1,기본2, 기본3
+차정보(tea guide)
+차용어풀이/티아카데미/데일리쿠킹메이드
+3)tea life
+이벤트/ 매거진/ 커뮤니티
+4 )brand-소개/동영상/tag
+about Osulloc

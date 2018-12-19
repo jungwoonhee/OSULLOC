@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/jquery.fullPage.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>osulloc</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./js/jquery.fullPage.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+		$(document).ready(function(){
+			// 메인 풀페이지
+			$("#main_page").fullpage({
+				links:["TEA_SHOP","TEA_GUID","TEA_LIFE","ABOUT_OSULLOC"],
+				anchors:["TEA_SHOP","TEA_GUID","TEA_LIFE","ABOUT_OSULLOC"],
+				menu:"#main_menu",
+				'afterLoad': function(anchorLink, index){
+					if(index == 1){
+						$('.main1_txt,.main1_img,.main1_2img,.main1_3img,.main1_4img').addClass('mactive');
+					}else{$('.main1_txt,.main1_img,.main1_2img,.main1_3img,.main1_4img').removeClass('mactive');}
+
+					if(index == 2){
+						$('.main2_txt').addClass('mactive');
+					}else{$('.main2_txt').removeClass('mactive');}
+
+					if(index == 3){
+						$('.main3_txt,.main3_img').addClass('mactive');
+					}else{$('.main3_txt,.main3_img').removeClass('mactive');}
+
+					if(index == 4){
+						$('.main4_txt').addClass('mactive');
+					}else{$('.main4_txt').removeClass('mactive');}
+				}
+				
+			});
+
+			//메뉴 토글
+			$(".toggle").click(function(){
+				$(".toggle").hide();
+				$("#main_toggle").animate({right:0});
+				$(".close").show();
+			});
+			$(".close").click(function(){
+				$(".close").hide();
+				$("#main_toggle").animate({right:-750});
+				$(".toggle").show();
+			});
+
+		 setInterval(function(){Button();},500);
+
+     function Button(){
+     	$(".close").animate({"top":"45px"},500);
+     	$(".close").animate({"top":"50px"},500);
+     }   
+
+			//제품 호버
+			var m3img=["main03_1","main03_2","main03_3"];
+			var m3hover=["main03_1_over","main03_2_over","main03_3_over"];
+			$(".main3_img>ul>li").hover(function(){
+			$(".main3_img img").eq($(this).index()).attr("src","./img2/"+m3hover[$(this).index()]+".jpg");
+			},function(){
+			$(".main3_img img").eq($(this).index()).attr("src","./img2/"+m3img[$(this).index()]+".jpg");
+			});
+		});
+	</script>
+</head>
+<body>
+<!-- 상단 고정 메뉴 -->
+<nav id="top">
+<div id="logo">
+	<div class="main_logo">
+		<a href="index.html"><img src="./img2/logo.png" alt="오설록"></a>
+	</div>
+	<div class="toggle"><img src="./img/btn_toggle.png" alt="토글 버튼"></div>
+	<div class="close"><img src="./img/btn_close.png" alt="닫기 버튼"></div>
+</div>
+	<ul id="main_menu">
+		<li data-menuanchor="TEA_SHOP"><a href="#TEA_SHOP" id="menu1"><img src="./img/menu_dot.png" alt="메뉴 도트">
+		<div class="mouseon">
+			<p>TEA SHOP</p>
+			<div class="stroke"></div>
+		</div>
+		</a></li>
+		<li data-menuanchor="TEA_GUID"><a href="#TEA_GUID">
+  <img src="./img/menu_dot.png" alt="메뉴 도트">
+  <div class="mouseon">
+			<p>TEA GUIDE</p>
+			<div class="stroke"></div>
+		</div>
+  </a></li>
+		<li data-menuanchor="TEA_LIFE"><a href="#TEA_LIFE"><img src="./img/menu_dot.png" alt="메뉴 도트">
+		<div class="mouseon">
+			<p>TEA LIFE</p>
+			<div class="stroke"></div>
+		</div>
+	  </a></li>
+		<li data-menuanchor="ABOUT_OSULLOC"><a href="#ABOUT_OSULLOC"><img src="./img/menu_dot.png" alt="메뉴 도트">
+		<div class="mouseon">
+			<p>ABOUT OSULLOC</p>
+			<div class="stroke"></div>
+		</div>
+	  </a></li>
+	</ul>
+</nav>
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+	<div class="join">
+		<ul>
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">JOIN</a></li>
+			<li><a href="#">SHOPPING</a></li>
+		</ul>
+	</div>
+	<nav class="toggle_menu">
+		<ul>
+			<li><a href="sub1.html">TEA SHOP</a>
+			 <ul>
+			 	<li><a href="sub1.html">잎차</a></li>
+			 	<li><a href="sub1.html">피라미드</a></li>
+			 	<li><a href="sub1.html">티백</a></li>
+			 </ul>
+			<li><a href="sub2.html">TEA GUIDE</a>
+			 <ul>
+			 	<li><a href="sub2.html">차용어풀이</a></li>
+			 	<li><a href="sub2.html">티아카데미</a></li>
+			 	<li><a href="sub2.html">데일리쿠킹</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub3.html">TEA LIFE</a>
+			 <ul>
+			 	<li><a href="sub3.html">이벤트</a></li>
+			 	<li><a href="sub3.html">매거진</a></li>
+			 	<li><a href="sub3.html">커뮤니티</a></li>
+			 </ul>
+			</li>
+			<li><a href="sub4.html">ABOUT OSULLOC</a>
+			 <ul>
+			 	<li><a href="sub4.html">OSULLOC</a></li>
+			 	<li><a href="sub4.html">TEA HOUSE</a></li>
+			 	<li><a href="sub4.html">#HASHTAG</a></li>
+			 </ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="footer">
+  <!-- <ul class="person">
+  	<li><a href="#">개인정보 처리 방침</a></li>
+  	<li><a href="#">이용약관</a></li>
+  </ul> -->
+  <br>
+	<p>(주)아모레퍼시픽</p>
+	<p>대표이사:서경배 주소:서울특별시 용산구 한강대로 100(한강로2가) 사업자등록번호: 106-86-43373<br>
+통신판매업신고번호:2017-서울용산-1308호 호스팅제공자: ㈜아모레퍼시픽9</p>
+	<p>© 1979-2017 AMOREPACIFIC. All Rights Reserved</p>
+  </div>
+</div>
+
+<!-- 메인 페이지 -->
+<div id="main_page">
+ <!-- TEA SHOP-->
+ <div id="page1" class="section pages" data-anchor="TEA_SHOP">
+ 	<div id="move1">
+ 	 <div class="main1_txt">
+ 	 	<img src="./img2/text.png" alt="season 설명">
+ 	 	<button type="button"><a href="sub1.html">시즌추천 보러가기</a></button>
+ 	</div>
+ 	 <div class="main1_img"><img src="./img2/memory_product_01.png" alt="season"></div>
+ 	 <div class="main1_2img"><img src="./img2/memory_product_02.png" alt="season"></div>
+ 	 <div class="main1_3img"><img src="./img2/memory_product_03.png" alt="season"></div>
+ 	 <div class="main1_4img"><img src="./img2/memory_product_04.png" alt="season"></div>
+ 	 <span><a href="#TEA_GUID" data-link="TEA_GUID"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+ 	</div>
+ </div>
+ 
+ <!-- tea guide
+  -->
+ <div id="page2" class="section pages" data-anchor="TEA_GUID">
+ 	<div id="move2">
+	 	<div class="main2_txt">
+		 	<span>TEA_GUID</span>
+		 	<br>
+		 	<br>
+		 	<p>차에 대한 모든 것을 알려드립니다.</p>
+	 	</div>
+	 	<div class="main3_img">
+			<ul>
+				<li><a href="sub3.html"><img src="./img2/main03_1.jpg" alt="용어"></a></li>
+				<li><a href="sub3.html"><img src="./img2/main03_2.jpg" alt="아카데미"></a></li>
+				<li><a href="sub3.html"><img src="./img2/main03_3.jpg" alt="쿠킹"></a></li>
+			</ul>
+		</div>
+
+ 	 <span><a href="#TEA_LIFE" data-link="TEA_LIFE"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+ 	</div>
+ </div>
+
+ <!-- tea life -->
+ <div id="page3" class="section pages" data-anchor="TEA_LIFE">
+ 	<div id="move3">
+ 		<div class="main3_txt">
+ 			<p>TEA_LIFE</p>
+ 			<button type="button"><a href="sub2.html">이벤트 보러가기</a></button>
+ 		</div>
+ 		
+ 	<span><a href="#ABOUT_OSULLOC" data-link="ABOUT_OSULLOC"><img src="./img/btn_scroll.png" alt="스크롤 버튼"></a></span>
+ 	</div>
+ </div>
+
+ <!-- 맥 소개 -->
+ <div id="page4" class="section pages" data-anchor="ABOUT_OSULLOC">
+ 	<div id="move4">
+ 		<div class="main4_txt">
+ 			
+ 			<ul>
+ 				<li><a href="sub4.html">OSULLOC 소개</a></li>
+ 				<li><a href="sub4.html">동영상</a></li>
+ 				<li><a href="sub4.html">#Osulloc</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+</div>
+</body>
+</html>
