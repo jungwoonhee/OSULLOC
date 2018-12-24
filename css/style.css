@@ -80,13 +80,14 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 #move2{width: 1200px; height: 100%; margin: 0 auto; position: relative;}
 #move2>.main2_txt>span{width: 500px;font-size: 80px; font-weight: 800; color: white; text-shadow: 0 0 10px #000; margin-left: 300px;}
 #move2>.main2_txt{position: absolute; width: 1000px; margin-left: 50%; left: -500px; top: 50px; opacity: 0.2;}
-#move2>.main2_txt>p{text-align: center; font-size: 22px; font-weight: 700; margin: 10px 0;color: #fff}
-.main3_txt>button{width: 250px; height: 50px; border: 1px solid #000; background: none; margin-top: 40px; margin-left: 370px;}
-.main3_txt>button:hover{background-color: #c4cc95;color: #fff}
-.main3_txt>button>a{display: block; line-height: 40px; font-size: 17px; font-weight: 700;}
+#move2>.main2_txt>p, .main3_txt>p{text-align: center; font-size: 22px; font-weight: 700; margin: 10px 0;color: #fff}
+.main3_txt>button{width: 250px; height: 50px; border: 1px solid #ddd; background: none; margin-top: 40px; margin-left: 370px;}
+.main3_txt>button:hover{background-color: #C3CB95;}
+.main3_txt>button>a{display: block; line-height: 40px; font-size: 17px; font-weight: 700;color: #808080}
+.main3_txt>button>a:hover{color: #000}
 #move2>span{position: absolute; bottom: 30px; left: 570px;}
 
-#page2 div.main2_txt.mactive{transform:translateY(280px);transition: all 800ms ease;opacity: 1;}
+#page2 div.main2_txt.mactive{transform:translateY(200px);transition: all 800ms ease;opacity: 1;}
 
 /*제품*/
 #page3{background-image: url(../img2/main03.jpg); position: relative;}
@@ -101,8 +102,8 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 #move2>.main3_img>ul>li>a{display: block;}
 #move3>span{position: absolute; bottom: 30px; left: 570px;}
 
-#page3 div.main3_txt.mactive{transform:translateY(-250px);transition: all 800ms ease;opacity: 1;}
-#page3 div.main3_img.mactive{transform:translateY(-250px);transition: all 800ms ease;opacity: 1;}
+#page3 div.main3_txt.mactive{transform:translateY(-180px);transition: all 800ms ease;opacity: 1;}
+#page3 div.main3_img.mactive{transform:translateY(-180px);transition: all 800ms ease;opacity: 1;}
 
 /*맥 소개*/
 #page4{background-image: url(../img2/main04.jpg);}
@@ -118,15 +119,15 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 #move4>.main4_txt>ul>li:nth-child(2):hover{background-position: 150px 300px}
 #move4>.main4_txt>ul>li:nth-child(3):hover{background-position: 150px 150px}
 
-#page4 div.main4_txt.mactive{transform:translateY(250px);transition: all 800ms ease;opacity: 1;}
+#page4 div.main4_txt.mactive{transform:translateY(200px);transition: all 800ms ease;opacity: 1;}
 
 
 /*서브페이지*/
 /*서브 제목*/
-#sub_header1{background: url("../img/sub01.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
-#sub_header2{background: url("../img/sub02.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
-#sub_header3{background: url("../img/sub03.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
-#sub_header4{background: url("../img/sub04.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
+#sub_header1{background: url("../img2/sub01.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
+#sub_header2{background: url("../img2/main02.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
+#sub_header3{background: url("../img2/main03.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
+#sub_header4{background: url("../img2/brand_a2.jpg") no-repeat; width: 100%; height: 550px; min-width: 1200px; position: relative;}
 #sub_title{color:white; text-align: center; padding-top: 200px;}
 #sub_title>.title{font-size: 64px; font-weight: 700; text-shadow: 2px 2px #171717; margin-bottom: 40px;}
 #sub_title>p{font-weight: 700; font-size: 20px; text-shadow: 2px 2px 10px #171717; line-height: 30px;}
@@ -141,12 +142,14 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 /*서브 내용*/
 .sub_description{width: 1200px; margin: 0 auto; display: none;}
 .sub_description>.s_title{font-size: 40px; font-weight: 700; text-align: center; margin-top: 50px;}
-.sub_description>.stroke{width: 50px; height: 3px; background-color: #35067c; margin: 30px auto;}
+.sub_description>.stroke{width: 50px; height: 3px; background-color: #C3CB95; margin: 30px auto;}
 .sub_description>.s_des{text-align: center; font-size: 18px; margin-top: -10px; margin-bottom: 30px;}
-.sub_description>img{cursor: pointer;}
+.s_des>span{font-weight: bold;}
+.s_des>br{}
+.sub_description>img{cursor: pointer;margin: 0 auto}
 
-.sub_description .video{float: left; margin: 30px 50px;width: 500px; height: 480px; background-color: #000}
-.sub_description .video>p{width: 450px; margin-left: 25px; color: #fff;}
+.sub_description .video{float: left; margin: 30px 50px;width: 500px; _height: 480px; background-color: #fff;}
+.sub_description .video>p{width: 450px; margin-left: 25px; color: #000;}
 
 .sub_description button {border: 1px solid #000; background: none; width: 250px; height: 50px; margin-left: 475px; margin-top: 30px;}
 .sub_description button a{display: block; line-height: 50px; font-size: 18px;}
@@ -155,12 +158,12 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 
 /*푸터*/
 footer{background-color: #000; min-width: 1200px; height: 150px;}
-#footer_main{width: 1200px; margin: 0 auto; padding-top: 40px;}
+#footer_main{width: 1200px; margin: 0 auto; padding-top: 30px;}
 #footer_main>.footer_logo{width: 150px;float: left; padding-top: 15px;}
-#footer_main>ul{overflow: hidden; float: right;}
-#footer_main>ul>li{float: left;}
-#footer_main>ul>li>a{display: block; color:#8f8f8f; font-weight: 700;}
-#footer_main>.footer_address{color:#8f8f8f; float: right; text-align: right;}
+/*#footer_main>ul{overflow: hidden; float: right;}*/
+/*#footer_main>ul>li{float: left;}*/
+/*#footer_main>ul>li>a{display: block; color:#8f8f8f; font-weight: 700;}*/
+#footer_main>.footer_address{color:#8f8f8f; float: right; text-align: right;font-size: 14px}
 
 /*위로 버튼*/
 #topBtn{position: fixed; bottom: 50px; right: 50px; display: none; width: 70px; line-height: 70px; background-color: black; color: #fff; text-align: center; border-radius: 35px; z-index: 0;}
