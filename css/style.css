@@ -12,7 +12,7 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 #logo>.close{position: fixed; top: 45px; display: none; cursor: pointer;}
 
 #main_menu{position: fixed; top: 140px;z-index:2; min-width: 1200px;}
-#main_menu >li{padding: 10px 0; position: relative; height: 40px;}
+#main_menu >li{padding: 10px 0; position: relative; height: 40px;width: 200px;}
 #main_menu >li>a{display: block; color: white;}
 #main_menu >li>a>.mouseon{width: 200px;position: absolute; top: 10px; display: none;}
 #main_menu >li>a>.mouseon>p{font-size: 20px; font-weight: 700;}
